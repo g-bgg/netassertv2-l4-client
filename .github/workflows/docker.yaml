@@ -37,18 +37,10 @@ jobs:
           push: true
           tags: controlplane/netassertv2-l4-client:${{ github.ref_name }}
 
-      - name: Run Trivy vulnerability scanner
-        uses: aquasecurity/trivy-action@master
+      - name: Build and push
+        uses: docker/build-push-action@v4
         with:
-          image-ref: controlplane/netassertv2-l4-client:${{ github.ref_name }}
-          ignore-unfixed: true
-          format: table
-          output: 'trivy-results.txt'
-          #format: 'sarif'
-          #output: 'trivy-results.sarif'
-      # print results while waiting for sarif upload to be available
-      - run: cat trivy-results.txt
-      # - name: Upload Trivy scan results to GitHub Security tab
-      #   uses: github/codeql-action/upload-sarif@v2
-      #   with:
-      #     sarif_file: 'trivy-results.sarif'
+          push: true
+          tags: |
+            controlplane/netassertv2-packet-sniffer:${{ github.ref_name }}
+            controlplane/netassertv2-packet-sniffer:latest

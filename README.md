@@ -1,5 +1,8 @@
 # Netassertv2-l4-client
 
+[![Testing Workflow][testing_workflow_badge]][testing_workflow_badge]
+[![Release Workflow][release_workflow_badge]][release_workflow_badge]
+
 The `Netassertv2-l4-client` is a Go program designed to open TCP / UDP connections toward a specified destination and send a configurable string payload.
 
 A test comprises one or more connection attempts, and a passed test results in the client exiting with a status code of 0 (1 otherwise).
@@ -89,3 +92,6 @@ Connection received on localhost 55004
 examplemessage
 Listening on localhost 12345
 ```
+
+[testing_workflow_badge]: https://github.com/controlplaneio/netassertv2-l4-client/workflows/Lint%20and%20Build/badge.svg
+[release_workflow_badge]: https://github.com/controlplaneio/netassertv2-l4-client/workflows/Docker%20build%20and%20publish/badge.svg
