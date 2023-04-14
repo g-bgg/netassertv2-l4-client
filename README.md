@@ -7,7 +7,7 @@ The `Netassertv2-l4-client` is a Go program designed to open TCP / UDP connectio
 
 A test comprises one or more connection attempts, and a passed test results in the client exiting with a status code of 0 (1 otherwise).
 
-You can pull the latest Docker image from `docker.io/controlplane/netassertv2-l4-client:1.0.0`
+You can pull the latest Docker image from `docker.io/controlplane/netassertv2-l4-client:latest`
 
 ## Configuration
 
