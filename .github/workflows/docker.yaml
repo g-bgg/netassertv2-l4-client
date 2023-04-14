@@ -40,5 +40,5 @@ jobs:
         with:
           push: true
           tags: |
-            controlplane/netassertv2-packet-sniffer:${{ github.ref_name }}
-            controlplane/netassertv2-packet-sniffer:latest
+            controlplane/netassertv2-l4-client:${{ github.ref_name }}
+            controlplane/netassertv2-l4-client:latest
